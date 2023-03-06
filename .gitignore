@@ -1,6 +1,7 @@
 # Prerequisites
 *.d
 
+simulation/build/
 
 # Compiled Object files
 *.slo
