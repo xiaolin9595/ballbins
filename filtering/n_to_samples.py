@@ -28,7 +28,7 @@ parser.add_argument(
 parser.add_argument(
     "-i", "--in", help="The name of the input file. Should be located in ../data/", default="data.csv")
 parser.add_argument(
-    "-o", "--out", help="The name of the output file. Will be located in ../data_filtered/", default="filtered.csv")
+    "-o", "--out", help="The name of the output file. Will be located in ../data_filtered/n_to_samples/", default="filtered.csv")
 args = vars(parser.parse_args())
 
 # This dictionary will contain the result
@@ -68,11 +68,17 @@ with open(inputpath, "r") as infile:
             f[n] = numSamples
         f[n] = min(f[n],numSamples)
 
+# Create directory if it does not yet exist
+if not os.path.exists("../data_filtered"):
+    os.makedirs("../data_filtered")
+if not os.path.exists("../data_filtered/n_to_samples"):
+    os.makedirs("../data_filtered/n_to_samples")
+
 # Write the result to a csv file
 if len(f) == 0:
     print("Warning: No data for your set of parameters found.")
     exit(0)
-outputpath = "../data_filtered/"+args["out"]
+outputpath = "../data_filtered/n_to_samples/"+args["out"]
 with open(outputpath, mode="w") as outfile:
     writer = csv.writer(outfile, delimiter=',')
     for n in f:

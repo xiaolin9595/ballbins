@@ -27,7 +27,7 @@ parser.add_argument(
 parser.add_argument(
     "-i", "--in", help="The name of the input file. Should be located in ../data/", default="data.csv")
 parser.add_argument(
-    "-o", "--out", help="The name of the output file. Will be located in ../data_filtered/", default="filtered.csv")
+    "-o", "--out", help="The name of the output file. Will be located in ../data_filtered/samples_to_prob/", default="filtered.csv")
 args = vars(parser.parse_args())
 
 # These two lists will contain the result
@@ -73,12 +73,18 @@ with open(inputpath, "r") as infile:
         xs.append(numSamples)
         ys.append(p)
 
+# Create directory if it does not yet exist
+if not os.path.exists("../data_filtered"):
+    os.makedirs("../data_filtered")
+if not os.path.exists("../data_filtered/samples_to_prob"):
+    os.makedirs("../data_filtered/samples_to_prob")
+
 # Write the result to a csv file
 assert (len(xs) == len(ys))
 if len(xs) == 0:
     print("Warning: No data for your set of parameters found.")
     exit(0)
-outputpath = "../data_filtered/"+args["out"]
+outputpath = "../data_filtered/samples_to_prob/"+args["out"]
 with open(outputpath, mode="w") as outfile:
     writer = csv.writer(outfile, delimiter=',')
     for i in range(len(xs)):
