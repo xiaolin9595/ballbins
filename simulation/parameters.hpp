@@ -6,7 +6,7 @@
  * Number of times the experiment is run for our simulation.
  * The more runs, the less efficient but the more precise.
  */
-#define SIMULATION_NUMRUNS 10000
+#define SIMULATION_NUMRUNS 25000
 
 /**
  * Once the probability is below this threshold,
