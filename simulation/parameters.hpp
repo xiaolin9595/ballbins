@@ -38,7 +38,7 @@ const std::vector<int> QS = {8, 64, 128};
 */
 #define ELLSTEPS 5
 #define KOFFLOW 0
-#define KOFFHIGH 0
+#define KOFFHIGH 100
 
 /** The path where the data is stored */
 #define DATAPATH "../../data/data.csv"

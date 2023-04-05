@@ -43,10 +43,10 @@ int main() {
                 for (int qi = 0; qi < qs.size(); ++qi) {
                     int q = qs[qi];
                     printInfo(s, q, n, k);
-                    bool belowThresh = false;
                     int ellLow = k / q + KOFFLOW;
                     int ellHigh = n / q + KOFFHIGH;
-                    for (int ell = ellLow; ell < ellHigh; ell += ELLSTEPS) {
+                    bool belowThresh = false;
+                    for (int ell = ellLow; ell < ellHigh || !belowThresh; ell += ELLSTEPS) {
                         double p = 0.0;
                         if (!belowThresh) {
                             p = simulate(samplers[s], n, k, q, ell);

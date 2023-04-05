@@ -45,3 +45,6 @@ Python scripts are provided that take care of such a filtering:
 * `filtering/n_to_samples.py`: Depdendency between `N` and the number of samples needed to get the failure probability below a given threshold.
 * `filtering/samples_to_prob.py`: Dependency between number of samples and failure probability.
 You can run both scripts with `--help` to get an overview of the input parameters.
+
+## Licence
+MIT License.
