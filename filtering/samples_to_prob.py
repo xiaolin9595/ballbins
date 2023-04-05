@@ -23,7 +23,7 @@ parser.add_argument(
 parser.add_argument(
     "--min", help="The start of the range for x = #samples", default=0, type=int)
 parser.add_argument(
-    "--max", help="The end of the range for x = #samples", default=2048, type=int)
+    "--max", help="The end of the range for x = #samples", default=4096, type=int)
 parser.add_argument(
     "-i", "--in", help="The name of the input file. Should be located in ../data/", default="data.csv")
 parser.add_argument(
@@ -31,8 +31,7 @@ parser.add_argument(
 args = vars(parser.parse_args())
 
 # These two lists will contain the result
-xs = []
-ys = []
+ys = {}
 
 # Check if input file exists. If it exists, read it
 inputpath = "../data/"+args["in"]
@@ -70,8 +69,17 @@ with open(inputpath, "r") as infile:
             continue
 
         # This line passed all checks, so we add it to the result
-        xs.append(numSamples)
-        ys.append(p)
+        ys[numSamples] = (p)
+
+# Postprocessing: 
+# We do not want too many data points that are not interesting, i.e., 
+# long tails of zeros.
+zeroIdx = [x for x in ys if ys[x] <= 0.0001]
+zeroIdx.sort()
+zeroIdx = zeroIdx[4:]
+for x in zeroIdx:
+    del ys[x]
+
 
 # Create directory if it does not yet exist
 if not os.path.exists("../data_filtered"):
@@ -80,12 +88,11 @@ if not os.path.exists("../data_filtered/samples_to_prob"):
     os.makedirs("../data_filtered/samples_to_prob")
 
 # Write the result to a csv file
-assert (len(xs) == len(ys))
-if len(xs) == 0:
+if len(ys) == 0:
     print("Warning: No data for your set of parameters found.")
     exit(0)
 outputpath = "../data_filtered/samples_to_prob/"+args["out"]
 with open(outputpath, mode="w") as outfile:
     writer = csv.writer(outfile, delimiter=',')
-    for i in range(len(xs)):
-        writer.writerow([xs[i], ys[i]])
+    for x in ys:
+        writer.writerow([x, ys[x]])
