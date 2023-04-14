@@ -11,11 +11,14 @@ class Rand {
    private:
     Rand();
     static Rand *instance;
-    static Rand *get(); 
+    static Rand  *get(); 
+    
 
     std::mt19937 generator;
 
    public:
+
+    static void init();
 
     /**
      * lowerBound is inclusive,

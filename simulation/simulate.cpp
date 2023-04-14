@@ -1,4 +1,5 @@
 #include "simulate.hpp"
+#include "Rand.hpp"
 
 #include <omp.h>
 
@@ -9,6 +10,8 @@
 double simulate(Sampler* sampler, int n, int k, int q, int ell) {
     // we do the experiment a lot of times,
     // and count how often we have less than k bins
+
+    Rand::init();
 
     int numBad = 0;
     #pragma omp parallel for reduction(+ : numBad)
