@@ -24,7 +24,7 @@ parser.add_argument(
 parser.add_argument(
     "--min", help="The start of the range for n", default=0, type=int)
 parser.add_argument(
-    "--max", help="The end of the range for n", default=4096, type=int)
+    "--max", help="The end of the range for n", default=8192, type=int)
 parser.add_argument(
     "-i", "--in", help="The name of the input file. Should be located in ../data/", default="data.csv")
 parser.add_argument(
