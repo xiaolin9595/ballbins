@@ -24,7 +24,7 @@
 /**
  * Range of Qs
  */
-const std::vector<int> QS = {8, 64, 128};
+const std::vector<int> QS = {8, 32};
 
 /**
  * Range of Ks is {N/KDENOM*i | i = KSTARTI,... KENDI}
