@@ -38,7 +38,7 @@ int main() {
                 if (samplers[s]->isQSensitive()) {
                     qs = QS;
                 } else {
-                    qs.push_back(QS[0]);
+                    qs.push_back(QS.back());
                 }
                 for (int qi = 0; qi < qs.size(); ++qi) {
                     int q = qs[qi];

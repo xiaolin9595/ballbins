@@ -32,7 +32,7 @@ To compile the simulation code, run
     make
 ```
 You may have to install `openmp` if you do not have it.
-Then, run `./simulate`. It may take a while.
+Then, run `./simulate`. It may take a while (took up to 7 hours on a standard laptop).
 The resulting data can be found in `data/data.csv`.
 
 
