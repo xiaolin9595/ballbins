@@ -22,7 +22,7 @@ int main() {
     samplers.push_back(new SegmentSampler());
 
     /**
-     * For all samplers, for each n, for each k, 
+     * For all samplers, for each n, for each k,
      * for each q, for each l, determine the probability
      * by simulation
      */

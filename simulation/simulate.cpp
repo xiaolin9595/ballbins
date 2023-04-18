@@ -1,10 +1,10 @@
 #include "simulate.hpp"
-#include "Rand.hpp"
 
 #include <omp.h>
 
 #include <vector>
 
+#include "Rand.hpp"
 #include "parameters.hpp"
 
 double simulate(Sampler* sampler, int n, int k, int q, int ell) {

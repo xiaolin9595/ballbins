@@ -35,8 +35,8 @@ const std::vector<int> QS = {8, 32};
 
 /**
  * number of client ell will be in range [k/q+KOFFLOW,n/q+KOFFHIGH] with step width ELLSTEPS
-*/
-#define ELLSTEPS 5
+ */
+#define ELLSTEPS 1
 #define KOFFLOW 0
 #define KOFFHIGH 100
 
