@@ -1,10 +1,10 @@
 # N_TO_SAMPLES
 
-python3 n_to_samples.py --sampler 0 -q 32 -d 0.25 --out 0_25/wr.csv 
-python3 n_to_samples.py --sampler 1 -q 8 -d 0.25 --out 0_25/wor_8.csv  
-python3 n_to_samples.py --sampler 1 -q 32 -d 0.25 --out 0_25/wor_32.csv 
-python3 n_to_samples.py --sampler 2 -q 8 -d 0.25 --out 0_25/seg_8.csv 
-python3 n_to_samples.py --sampler 2 -q 32 -d 0.25 --out 0_25/seg_32.csv  
+# python3 n_to_samples.py --sampler 0 -q 32 -d 0.25 --out 0_25/wr.csv 
+# python3 n_to_samples.py --sampler 1 -q 8 -d 0.25 --out 0_25/wor_8.csv  
+# python3 n_to_samples.py --sampler 1 -q 32 -d 0.25 --out 0_25/wor_32.csv 
+# python3 n_to_samples.py --sampler 2 -q 8 -d 0.25 --out 0_25/seg_8.csv 
+# python3 n_to_samples.py --sampler 2 -q 32 -d 0.25 --out 0_25/seg_32.csv  
 
 python3 n_to_samples.py --sampler 0 -q 32 -d 0.5 --out 0_5/wr.csv 
 python3 n_to_samples.py --sampler 1 -q 8 -d 0.5 --out 0_5/wor_8.csv 
@@ -18,6 +18,12 @@ python3 n_to_samples.py --sampler 1 -q 8 -d 0.75 --out 0_75/wor_8.csv
 python3 n_to_samples.py --sampler 2 -q 8 -d 0.75 --out 0_75/seg_8.csv 
 python3 n_to_samples.py --sampler 2 -q 32 -d 0.75 --out 0_75/seg_32.csv  
 
+
+python3 n_to_samples.py --sampler 0 -q 32 -d 1 --out 1/wr.csv 
+python3 n_to_samples.py --sampler 1 -q 8 -d  1 --out 1/wor_8.csv  
+python3 n_to_samples.py --sampler 1 -q 32 -d 1 --out 1/wor_32.csv 
+python3 n_to_samples.py --sampler 2 -q 8 -d  1 --out 1/seg_8.csv 
+python3 n_to_samples.py --sampler 2 -q 32 -d 1 --out 1/seg_32.csv  
 
 
 # SAMPLES_TO_PROB

@@ -44,9 +44,12 @@ int main() {
                     int q = qs[qi];
                     printInfo(s, q, n, k);
                     int ellLow = k / q + KOFFLOW;
+                    // int ellLow =1;
+                    // int ellHigh=2;
                     int ellHigh = n / q + KOFFHIGH;
                     bool belowThresh = false;
                     for (int ell = ellLow; ell < ellHigh || !belowThresh; ell += ELLSTEPS) {
+                        //  std::cout << "The ell is: " << ell << std::endl;
                         double p = 0.0;
                         if (!belowThresh) {
                             p = simulate(samplers[s], n, k, q, ell);

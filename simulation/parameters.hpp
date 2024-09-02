@@ -6,7 +6,9 @@
  * Number of times the experiment is run for our simulation.
  * The more runs, the less efficient but the more precise.
  */
-#define SIMULATION_NUMRUNS 20000
+//#define SIMULATION_NUMRUNS 20000
+//2024.08.30
+#define SIMULATION_NUMRUNS 1000
 
 /**
  * Once the probability is below this threshold,
@@ -31,8 +33,12 @@ const std::vector<int> QS = {8, 32};
  * Range of Ks is {N/KDENOM*i | i = KSTARTI,... KENDI}
  */
 #define KDENOM 4
-#define KSTARTI 1
-#define KENDI 3
+//#define KSTARTI 1
+//2024.09.01
+#define KSTARTI 2
+//#define KENDI 3
+//2024.08.30
+#define KENDI 4
 
 /**
  * number of client ell will be in range [k/q+KOFFLOW,n/q+KOFFHIGH] with step width ELLSTEPS
