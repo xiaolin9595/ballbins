@@ -28,11 +28,11 @@ python3 n_to_samples.py --sampler 2 -q 32 -d 1 --out 1/seg_32.csv
 
 # SAMPLES_TO_PROB
 
-python3 samples_to_prob.py --sampler 0 -q 32 -n 1024 -k 256 --max 800 --out 1024_256/wr.csv
-python3 samples_to_prob.py --sampler 1 -q 8 -n 1024 -k 256 --max 800 --out 1024_256/wor_8.csv
-python3 samples_to_prob.py --sampler 1 -q 32 -n 1024 -k 256 --max 800 --out 1024_256/wor_32.csv
-python3 samples_to_prob.py --sampler 2 -q 8 -n 1024 -k 256  --max 800 --out 1024_256/seg_8.csv
-python3 samples_to_prob.py --sampler 2 -q 32 -n 1024 -k 256 --max 800 --out 1024_256/seg_32.csv
+# python3 samples_to_prob.py --sampler 0 -q 32 -n 1024 -k 256 --max 800 --out 1024_256/wr.csv
+# python3 samples_to_prob.py --sampler 1 -q 8 -n 1024 -k 256 --max 800 --out 1024_256/wor_8.csv
+# python3 samples_to_prob.py --sampler 1 -q 32 -n 1024 -k 256 --max 800 --out 1024_256/wor_32.csv
+# python3 samples_to_prob.py --sampler 2 -q 8 -n 1024 -k 256  --max 800 --out 1024_256/seg_8.csv
+# python3 samples_to_prob.py --sampler 2 -q 32 -n 1024 -k 256 --max 800 --out 1024_256/seg_32.csv
 
 python3 samples_to_prob.py --sampler 0 -q 32 -n 1024 -k 512 --max 1200 --out 1024_512/wr.csv
 python3 samples_to_prob.py --sampler 1 -q 8 -n 1024 -k 512 --max 1200 --out 1024_512/wor_8.csv
@@ -45,6 +45,7 @@ python3 samples_to_prob.py --sampler 1 -q 8 -n 1024 -k 768 --max 2200 --out 1024
 python3 samples_to_prob.py --sampler 1 -q 32 -n 1024 -k 768 --max 2200 --out 1024_768/wor_32.csv
 python3 samples_to_prob.py --sampler 2 -q 8 -n 1024 -k 768 --max 2200 --out 1024_768/seg_8.csv
 python3 samples_to_prob.py --sampler 2 -q 32 -n 1024 -k 768 --max 2200 --out 1024_768/seg_32.csv
+
 
 
 
@@ -67,3 +68,10 @@ python3 samples_to_prob.py --sampler 1 -q 8 -n 2048 -k 1536 --max 4000 --out 204
 python3 samples_to_prob.py --sampler 1 -q 32 -n 2048 -k 1536 --max 4000 --out 2048_1536/wor_32.csv
 python3 samples_to_prob.py --sampler 2 -q 8 -n 2048 -k 1536 --max 4000 --out 2048_1536/seg_8.csv
 python3 samples_to_prob.py --sampler 2 -q 32 -n 2048 -k 1536 --max 4000 --out 2048_1536/seg_32.csv
+
+
+python3 samples_to_prob.py --sampler 0 -q 32 -n 2048 -k 2048 --max 20000  --min 8000 --out 2048_2048/wr.csv
+python3 samples_to_prob.py --sampler 1 -q 8 -n 2048 -k 2048 --max 20000 --min 8000 --out 2048_2048/wor_8.csv
+python3 samples_to_prob.py --sampler 1 -q 32 -n 2048 -k 2048 --max 20000 --min 8000 --out 2048_2048/wor_32.csv
+python3 samples_to_prob.py --sampler 2 -q 8 -n 2048 -k 2048 --max 20000 --min 8000 --out 2048_2048/seg_8.csv
+python3 samples_to_prob.py --sampler 2 -q 32 -n 2048 -k 2048 --max 20000 --min 8000 --out 2048_2048/seg_32.csv
